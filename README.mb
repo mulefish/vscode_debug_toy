@@ -1,24 +1,7 @@
-<html>
 
-<head>
-	<script src='/script.js'> </script>
-
-</head>
-
-
-<body>
-	hello there
-	<div id="count"> </div> 
-	<hr/> 
-	<button onclick='hello()'>clickme</button> 
-
-
-
-
-	<pre>
-		+ --------------------------------------------------------- + 
-		1 of 4 : NODE DEBUG
-		STEP 1: 
+#		+ --------------------------------------------------------- + 
+#		1 of 4 : NODE DEBUG
+		- STEP 1: 
 		Have this in your launch.json and have it selected 
 		{
 			"name": "NAME-of-this-particular-config",
@@ -29,21 +12,20 @@
 			],
 			"type": "node"
 		}
-		STEP 2: 
+		- STEP 2: 
 		triangle -> pick 'NAME-of-this-particular-config' from dropdown
 
-		STEP 3: 
+		- STEP 3: 
 		Drop some breakpoints in the target node code 
 
-		STEP 4: 
+		- STEP 4: 
 		'node script.js' or 'node mylogic.js' or...  
 
-		+ --------------------------------------------------------- + 
-		2 of 4 : CHROME DEBUG ( simple site )
+#		+ --------------------------------------------------------- + 
+#		2 of 4 : CHROME DEBUG ( simple site )
 
-		FIRST: Make sure NO debug kernals are running. 
-		ALSO FIRST: Make sure NO chrome instances are running. 
-
+		- FIRST: Make sure NO other debug kernals are running. 
+		- ALSO FIRST: Make sure NO chrome instances are running. 
 
 		Have this in your launch.json and have it selected 
 		{
@@ -58,37 +40,25 @@
 				}
 			]
 		}	
-		NOTE: 'pwa-chrome' = treat websites as native mobile or desktop apps
+		- NOTE: 'pwa-chrome' = treat websites as native mobile or desktop apps
 
 
-		+ --------------------------------------------------------- + 
-
-
-
+#		+ --------------------------------------------------------- + 
 
 
 
 
-		Extra of 4 : Some flag that I read about but have not ever figured out: 
+
+
+
+# 		Extra of 4 : Some flag that I read about but have not ever figured out: 
 		
-		Windows:		
+-		Windows:		
 			Right click the Chrome shortcut, and select properties
 			In the "target" field, append --remote-debugging-port=9222
 			Or in a command prompt, execute <path to chrome>/chrome.exe --remote-debugging-port=9222
 		
-		MacOS:
+-		MacOS:
 			In a terminal, execute /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
 		
 
-		</pre>
-
-		
-		<hr/> 
-		<button onclick='hello()'>clickme</button> 
-
-
-</body> 
-
-
-
-</html> 

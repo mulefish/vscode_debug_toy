@@ -7,85 +7,10 @@
 
 
 <body>
-	hello there
-	<div id="count"> </div> 
-	<hr/> 
 	<button onclick='hello()'>clickme</button> 
-
-
-
-
-	<pre>
-		+ --------------------------------------------------------- + 
-		1 of 4 : NODE DEBUG
-		STEP 1: 
-		Have this in your launch.json and have it selected 
-		{
-			"name": "NAME-of-this-particular-config",
-			"port": 9229,
-			"request": "attach",
-			"skipFiles": [
-				"<node_internals>/**"
-			],
-			"type": "node"
-		}
-		STEP 2: 
-		triangle -> pick 'NAME-of-this-particular-config' from dropdown
-
-		STEP 3: 
-		Drop some breakpoints in the target node code 
-
-		STEP 4: 
-		'node script.js' or 'node mylogic.js' or...  
-
-		+ --------------------------------------------------------- + 
-		2 of 4 : CHROME DEBUG ( simple site )
-
-		FIRST: Make sure NO debug kernals are running. 
-		ALSO FIRST: Make sure NO chrome instances are running. 
-
-
-		Have this in your launch.json and have it selected 
-		{
-			"version": "0.2.0",
-			"configurations": [
-				{
-					"type": "pwa-chrome",
-					"request": "launch",
-					"name": "Launch Chrome against localhost",
-					"url": "http://localhost:8080",
-					"webRoot": "${workspaceFolder}"
-				}
-			]
-		}	
-		NOTE: 'pwa-chrome' = treat websites as native mobile or desktop apps
-
-
-		+ --------------------------------------------------------- + 
-
-
-
-
-
-
-
-		Extra of 4 : Some flag that I read about but have not ever figured out: 
-		
-		Windows:		
-			Right click the Chrome shortcut, and select properties
-			In the "target" field, append --remote-debugging-port=9222
-			Or in a command prompt, execute <path to chrome>/chrome.exe --remote-debugging-port=9222
-		
-		MacOS:
-			In a terminal, execute /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
-		
-
-		</pre>
-
-		
-		<hr/> 
-		<button onclick='hello()'>clickme</button> 
-
+	<div id="count"> </div> 
+	<hr/>
+	Click the button and go see if '/script_for_web_page.js' is being debugged. 
 
 </body> 
 
