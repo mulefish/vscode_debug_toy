@@ -22,7 +22,7 @@
 		'node script.js' or 'node mylogic.js' or...  
 
 #		+ --------------------------------------------------------- + 
-#		2 of 4 : CHROME DEBUG ( simple site )
+#		2 of 4 : CHROME LAUNCH ( simple site )
 
 		- FIRST: Make sure NO other debug kernals are running. 
 		- ALSO FIRST: Make sure NO chrome instances are running. 
@@ -44,6 +44,19 @@
 
 
 #		+ --------------------------------------------------------- + 
+#		3 of 4 : CHROME ATTACH ( simple site )
+
+		FIRST: sudo /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+		Have this in your launch.json and have it selected 
+    	{
+        	"name": "Launch Chrome",
+        	"request": "launch",
+        	"type": "chrome",
+        	"url": "http://localhost:8080",
+        	"webRoot": "${workspaceFolder}"
+    	},
+		- ISSUE: Cannot connect to the target at localhost:9222: Could not connect to debug target at http://localhost:9222: Could not find any debuggable target
+		- WHY
 
 
 
