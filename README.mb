@@ -54,23 +54,20 @@
                     "request": "attach",
                     "type": "pwa-chrome",
                     "webRoot": "${workspaceFolder}"
-                },		- ISSUE: Cannot connect to the target at localhost:9222: Could not connect to debug target at http://localhost:9222: Could not find any debuggable target
-		- WHY
+                },
+
+#		+ --------------------------------------------------------- + 
+#		4 of 4 : SSR and CHROME ATTACH ( simple site )
+
+		FIRST: sudo /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+		Have this in your launch.json and have it selected 
+                {
+                    "name": "Attach to Chrome",
+                    "port": 9222,
+                    "request": "attach",
+                    "type": "pwa-chrome",
+                    "webRoot": "${workspaceFolder}"
+                },
 
 
-
-
-
-
-
-# 		Extra of 4 : Some flag that I read about but have not ever figured out: 
-		
--		Windows:		
-			Right click the Chrome shortcut, and select properties
-			In the "target" field, append --remote-debugging-port=9222
-			Or in a command prompt, execute <path to chrome>/chrome.exe --remote-debugging-port=9222
-		
--		MacOS:
-			In a terminal, execute /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
-		
-
+		It is a little tricky to get this working. I have found the using a 'debugger;' string for the first breakbpoint work better. Essentially, getting breakpoints to 'stick', at first, is tricky. 
